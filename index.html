@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Encoding -->
+		<meta charset="UTF-8">
+		<!-- Description of Web Page -->
+		<meta name="description" content="Dynamic Map, Thematic Visualization">
+		<!-- Keywords important for Google -->
+		<meta name="keywords" content="html, css, javascript, d3, EU, european, union">
+		<!-- Author information -->
+		<meta name="author" content="Adrián Castelló Martínez">
+
+		<!-- Title of the website on the tab -->
+		<title>Dynamic Map</title>
+
+		<!-- Icon of the website -->
+		<link href="img/mini_logo.png" rel="shortcut icon" type="image/png">
+
+		<!-- JavaScript -->
+		<script type="text/javascript" src="d3/d3.js"></script>
+		<script src="js/regions.js"></script>
+		<script type="js/othercountries.js"></script>
+		<script src="js/companies.js"></script>
+
+		<!-- Plotly.js 
+  		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
+		<script src="js/plotly-latest.min.js"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+		
+	</head>
+	<body>
+		<h1 class="main_title">LOCATION AND TURNOVER OF THE MOST IMPORTANT PUBLICLY TRADED COMPANIES (DAX KONZERNE) OF GERMANY IN 2012</h1>
+		<h2 class="main_title">NEW CAPABILITIES IN ADVANCED THEMATIC CARTOGRAPHY</h2>
+
+		<section id="info" class="info">
+			<section id="graphs" class="graphs">
+				<div id="legend" class="legend">
+					<h1>LEGEND</h1>
+					<form action="" id="radio_button" class="radio_button">
+						<p>Select a variable to show:</p><br>
+						<input type="radio" name="choose" value="Sector_option" checked>
+						<label for="Legend" style="font: 16px Georgia, serif">Sector</label><br>
+						<input type="radio" name="choose" value="UpperSector_option">
+						<label for="Statistics" style="font: 16px Georgia, serif">Upper Sector</label>
+					</form>
+
+					<div class="selectable">
+						<p>Select a variable to show:</p><br>
+						<input class="checkbox" type="checkbox" name="select_statistics" id="select_statistics" value="statistics_selected" unchecked>
+						<label for="Legend" style="font: 16px Georgia, serif">Show / hide General Statistics</label><br>
+						<input class="checkbox" type="checkbox" name="select_cards" id="select_cards" value="cards_selected" unchecked>
+						<label for="Legend" style="font: 16px Georgia, serif">Show / hide Info cards</label>
+					</div>
+
+					<h2 class="subtitle">Num. of Companies per Region</h2>
+
+				</div>
+				<div id="general" class="general">
+					<h1>GENERAL GRAPHICS</h1>
+				  	<div id="myDiv" class="myDiv" ><!-- Plotly chart will be drawn inside this DIV --></div>
+				  	<script src="js/js.js"></script>
+				</div>
+			</section>
+			<section id="cards" class="cards">
+				<div id="chart" class="chart">
+					<h1>INFORMATION CARDS</h1>
+					<div id="card_container" class="card_container"></div>
+				</div>
+			</section>
+
+		</section>
+
+		<!-- Map section -->
+		<div id="map_container" class="map_container"></div>
+
+
+		<script type="text/javascript" src="js/app.js"></script>
+		<!-- CSS Styling -->
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+	</body>
+</html>
